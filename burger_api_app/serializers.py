@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from burger_api_app.models import UserProfile
+from burger_api_app.models import UserProfile, Order
 
 # Create a UserProfileSerializer to show json data 
 class UserProfileSerializer(ModelSerializer):
@@ -22,3 +22,9 @@ class UserProfileSerializer(ModelSerializer):
             password=validated_data["password"],
         )
         return user 
+
+# Create a OrderSerializer class  
+class OrderSerializer(ModelSerializer):
+    class Meta:
+        model = Order
+        fields = "__all__"

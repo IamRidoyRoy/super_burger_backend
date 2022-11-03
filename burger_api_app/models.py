@@ -49,3 +49,15 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+# Create a Order class to see order 
+from django.conf import settings
+class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete= models.CASCADE)
+    product_name = models.TextField(max_length= 100, blank = False , null = False)
+    price = models.TextField(max_length=100, blank=False)
+    order_time = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self) :
+        return self.user

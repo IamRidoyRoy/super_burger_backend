@@ -6,10 +6,11 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-from burger_api_app.views import UserProfileViewSet
+from burger_api_app.views import UserProfileViewSet, OrderViewSet
 
 router = DefaultRouter()
 router.register(r'user', UserProfileViewSet)
+router.register(r'order', OrderViewSet, basename='order')
 
 urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
