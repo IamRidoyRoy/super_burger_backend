@@ -50,6 +50,17 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
+
+
+
+# # Create new model class Ingredients 
+# class Ingredients(models.Model):
+#     salad = models.TextField(max_length=100, blank = False)
+#     cheese = models.TextField(max_length=100)
+#     meat = models.TextField(max_length=100)
+#     chicken = models.TextField(max_length=100)
+
+    
 # Create a Order class to see order 
 from django.conf import settings
 class Order(models.Model):
@@ -57,7 +68,10 @@ class Order(models.Model):
     product_name = models.TextField(max_length= 100, blank = False , null = False)
     price = models.TextField(max_length=100, blank=False)
     order_time = models.DateTimeField(auto_now=True)
-
+    salad = models.TextField(max_length=100, blank = True)
+    cheese = models.TextField(max_length=100,  blank = True)
+    meat = models.TextField(max_length=100,  blank = True)
+    chicken = models.TextField(max_length=100,  blank = True)
 
     def __str__(self) :
-        return self.user
+        return self.product_name
