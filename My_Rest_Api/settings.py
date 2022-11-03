@@ -119,3 +119,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_DIR = BASE_DIR / 'media'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = "/media/"
+
+
+# Authenticate the user 
+AUTH_USER_MODEL = "burger_api_app.UserProfile"
