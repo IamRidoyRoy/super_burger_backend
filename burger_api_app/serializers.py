@@ -14,7 +14,7 @@ class UserProfileSerializer(ModelSerializer):
         extra_kwargs ={
             'password' : {'write_only': True, 'style': { 'input_type': 'password'}}
         }
-
+ 
     # Override the default create function as we used custom user model 
     def create(self, validated_data):
         user = UserProfile.objects.create_user(
