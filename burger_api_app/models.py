@@ -72,6 +72,12 @@ class Order(models.Model):
     cheese = models.TextField(max_length=100,  blank = True)
     meat = models.TextField(max_length=100,  blank = True)
     chicken = models.TextField(max_length=100,  blank = True)
+    
 
     def __str__(self) :
         return self.product_name
+
+
+# Create a model fore Address 
+class Address(models.Model):
+    address = models.TextField(max_length= 500, blank=False, null = False)
