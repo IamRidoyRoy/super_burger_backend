@@ -81,3 +81,6 @@ class Order(models.Model):
 # Create a model fore Address 
 class Address(models.Model):
     address = models.TextField(max_length= 500, blank=False, null = False)
+
+    def __str__(self):
+        return self.address

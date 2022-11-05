@@ -23,6 +23,13 @@ class UserProfileSerializer(ModelSerializer):
         )
         return user 
 
+# Create a Address ModelSerializer 
+class AddressSeriaLizer(ModelSerializer):
+    class Meta: 
+        model = Address
+        fields = "__all__"
+
+
 # Create a OrderSerializer class  
 class OrderSerializer(ModelSerializer):
     class Meta:
@@ -30,8 +37,5 @@ class OrderSerializer(ModelSerializer):
         fields = "__all__"
 
 
-# Create a Address ModelSerializer 
-class AddressSeriaLizer(ModelSerializer):
-    class Meta: 
-        model = Address
-        fields = "__all__"
+
+
